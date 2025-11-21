@@ -126,9 +126,7 @@ public class ItemStackBuilder {
         try {
             return ItemStackBuilder.of(Material.valueOf(color.name() + "_BANNER"));
         } catch (IllegalArgumentException ex) {
-            return ItemStackBuilder.of(Material.valueOf("BANNER")).transformMeta(BannerMeta.class, bannerMeta -> {
-                bannerMeta.setBaseColor(DyeColor.valueOf(color.name()));
-            });
+            return ItemStackBuilder.of(Material.valueOf("BANNER"));
         }
     }
 
